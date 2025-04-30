@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sahaf Paneli - Sahaf</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="sahaf-panel.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <h1 style="color: #ffd700">Webkit</h1>
+        </div>
+        <div class="search-bar">
+          <input type="text" placeholder="Kitap ara..." />
+          <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="user-menu">
+          <div class="notifications">
+            <i class="fas fa-bell"></i>
+            <span class="notification-badge">3</span>
+          </div>
+          <div class="user-profile">
+            <img
+              src="https://via.placeholder.com/40"
+              alt="Profil"
+              class="avatar"
+            />
+            <div class="dropdown-menu">
+              <a href="#"><i class="fas fa-user"></i> Profil</a>
+              <a href="#"><i class="fas fa-cog"></i> Ayarlar</a>
+              <a href="#"><i class="fas fa-sign-out-alt"></i> Çıkış</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="dashboard-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <nav class="sidebar-nav">
+          <a href="#" class="active"><i class="fas fa-home"></i> Ana Sayfa</a>
+          <a href="#"><i class="fas fa-book"></i> Kitaplarım</a>
+          <a href="#"><i class="fas fa-shopping-cart"></i> Siparişler</a>
+          <a href="#"><i class="fas fa-chart-line"></i> İstatistikler</a>
+          <a href="#"><i class="fas fa-comments"></i> Yorumlar</a>
+          <a href="#"><i class="fas fa-users"></i> Takipçiler</a>
+          <a href="#"><i class="fas fa-cog"></i> Ayarlar</a>
+        </nav>
+      </aside>
+
+      <!-- Main Content Area -->
+      <main class="main-content">
+        <!-- Profile and Notifications Container -->
+        <div class="profile-notifications-container">
+          <!-- Welcome Section -->
+          <section class="welcome-section">
+            <div class="profile-header">
+              <div class="profile-cover">
+                <img
+                  src="https://via.placeholder.com/1200x300"
+                  alt="Profil Kapak"
+                />
+                <div class="cover-overlay">
+                  <button class="edit-cover">
+                    <i class="fas fa-camera"></i>
+                    Kapak Fotoğrafını Değiştir
+                  </button>
+                </div>
+              </div>
+              <div class="profile-info">
+                <div class="profile-avatar">
+                  <div class="avatar-container">
+                    <img src="https://via.placeholder.com/150" alt="Profil" />
+                    <div class="avatar-overlay">
+                      <button class="edit-avatar">
+                        <i class="fas fa-camera"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="avatar-status">
+                    <span class="status-dot"></span>
+                    Aktif
+                  </div>
+                </div>
+                <div class="profile-details">
+                  <div class="profile-header-info">
+                    <div class="profile-name">
+                      <h2>Kitap Dünyası</h2>
+                      <span class="verified-badge">
+                        <i class="fas fa-check-circle"></i>
+                        Doğrulanmış Sahaf
+                      </span>
+                    </div>
+                    <div class="profile-actions">
+                      <button class="action-btn primary">
+                        <i class="fas fa-edit"></i>
+                        Profili Düzenle
+                      </button>
+                      <button class="action-btn secondary">
+                        <i class="fas fa-share"></i>
+                        Paylaş
+                      </button>
+                    </div>
+                  </div>
+                  <div class="profile-meta">
+                    <div class="location">
+                      <i class="fas fa-map-marker-alt"></i>
+                      <span>İstanbul, Türkiye</span>
+                    </div>
+                    <div class="join-date">
+                      <i class="fas fa-calendar-alt"></i>
+                      <span>Ocak 2024'ten beri üye</span>
+                    </div>
+                  </div>
+                  <div class="profile-stats">
+                    <div class="stat">
+                      <span class="number">4.8</span>
+                      <span class="label">Mağaza Puanı</span>
+                      <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                      </div>
+                    </div>
+                    <div class="stat">
+                      <span class="number">1,234</span>
+                      <span class="label">Takipçi</span>
+                      <span class="trend positive">
+                        <i class="fas fa-arrow-up"></i>
+                        12 bu ay
+                      </span>
+                    </div>
+                    <div class="stat">
+                      <span class="number">567</span>
+                      <span class="label">Kitap</span>
+                      <span class="trend positive">
+                        <i class="fas fa-arrow-up"></i>
+                        45 yeni
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Notifications Section -->
+          <section class="notifications-section">
+            <h3>Bildirimler</h3>
+            <div class="notification-list">
+              <div class="notification-item">
+                <i class="fas fa-bell"></i>
+                <div class="notification-content">
+                  <p>Yeni bir takas teklifi</p>
+                  <span>2 saat önce</span>
+                </div>
+              </div>
+              <div class="notification-item">
+                <i class="fas fa-comments"></i>
+                <div class="notification-content">
+                  <p>Yeni mesaj</p>
+                  <span>5 saat önce</span>
+                </div>
+              </div>
+              <div class="notification-item">
+                <i class="fas fa-shopping-cart"></i>
+                <div class="notification-content">
+                  <p>Yeni kitap siparişi</p>
+                  <span>1 gün önce</span>
+                </div>
+              </div>
+              <div class="notification-item">
+                <i class="fas fa-star"></i>
+                <div class="notification-content">
+                  <p>Yeni mağaza değerlendirmesi</p>
+                  <span>2 gün önce</span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Store Stats -->
+        <section class="store-stats">
+          <div class="stat-card">
+            <i class="fas fa-star"></i>
+            <div class="stat-info">
+              <h3>Mağaza Puanı</h3>
+              <span>4.8</span>
+              <small>120 değerlendirme</small>
+            </div>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-users"></i>
+            <div class="stat-info">
+              <h3>Takipçiler</h3>
+              <span>1,234</span>
+              <small>+12 bu ay</small>
+            </div>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-book"></i>
+            <div class="stat-info">
+              <h3>Toplam Kitap</h3>
+              <span>567</span>
+              <small>45 yeni eklenen</small>
+            </div>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-shopping-cart"></i>
+            <div class="stat-info">
+              <h3>Günlük Satış</h3>
+              <span>23</span>
+              <small>₺1,234 toplam</small>
+            </div>
+          </div>
+        </section>
+
+        <!-- Quick Actions and Sales Chart Container -->
+        <div class="chart-actions-container">
+          <!-- Quick Actions -->
+          <section class="quick-actions">
+            <h3>Hızlı İşlemler</h3>
+            <div class="action-buttons">
+              <button class="action-btn">
+                <i class="fas fa-plus"></i>
+                Yeni Kitap Ekle
+              </button>
+              <button class="action-btn">
+                <i class="fas fa-edit"></i>
+                Stok Düzenle
+              </button>
+              <button class="action-btn">
+                <i class="fas fa-tasks"></i>
+                Siparişleri Yönet
+              </button>
+            </div>
+          </section>
+
+          <!-- Sales Chart -->
+          <section class="sales-chart">
+            <h3>Satış İstatistikleri</h3>
+            <div class="chart-container">
+              <canvas id="salesChart"></canvas>
+            </div>
+          </section>
+        </div>
+
+        <!-- Recent Orders -->
+        <section class="recent-orders">
+          <h3>Son Siparişler</h3>
+          <div class="orders-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Sipariş No</th>
+                  <th>Müşteri</th>
+                  <th>Kitap</th>
+                  <th>Tutar</th>
+                  <th>Durum</th>
+                  <th>İşlem</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#12345</td>
+                  <td>Ahmet Yılmaz</td>
+                  <td>Suç ve Ceza</td>
+                  <td>₺89.90</td>
+                  <td><span class="status pending">Beklemede</span></td>
+                  <td>
+                    <button class="action-icon">
+                      <i class="fas fa-check"></i>
+                    </button>
+                    <button class="action-icon">
+                      <i class="fas fa-times"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#12344</td>
+                  <td>Ayşe Demir</td>
+                  <td>1984</td>
+                  <td>₺69.90</td>
+                  <td><span class="status completed">Tamamlandı</span></td>
+                  <td>
+                    <button class="action-icon">
+                      <i class="fas fa-eye"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+
+      <!-- Sağ Sidebar -->
+      
+
+    <script>
+      // Kullanıcı menüsü için dropdown
+      document
+        .querySelector(".user-profile")
+        .addEventListener("click", function () {
+          this.querySelector(".dropdown-menu").classList.toggle("active");
+        });
+
+      // Bildirim sayısını güncelleme
+      function updateNotificationCount() {
+        const count = document.querySelectorAll(".notification-item").length;
+        document.querySelector(".notification-badge").textContent = count;
+      }
+
+      // Sayfa yüklendiğinde bildirim sayısını güncelle
+      document.addEventListener("DOMContentLoaded", updateNotificationCount);
+
+      // Satış grafiği için Chart.js kullanımı
+      const ctx = document.getElementById("salesChart").getContext("2d");
+      new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: ["Pzt", "Sal", "Çar", "Per", "Cum", "Cmt", "Paz"],
+          datasets: [
+            {
+              label: "Günlük Satışlar",
+              data: [12, 19, 15, 25, 22, 30, 28],
+              borderColor: "#ffd700",
+              backgroundColor: "rgba(255, 215, 0, 0.1)",
+              tension: 0.4,
+              fill: true,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              display: false,
+            },
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              grid: {
+                display: true,
+                color: "rgba(0, 0, 0, 0.1)",
+              },
+            },
+            x: {
+              grid: {
+                display: false,
+              },
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suç ve Ceza - Sahaf</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="book-detail.css" />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header-container">
+          <div class="logo">
+            <h1 style="color: #ffd700">Webkit</h1>
+          </div>
+          <div class="nav-icons">
+            <a href="#" class="favorite-icon">
+              <i class="far fa-heart"></i>
+              <span class="favorite-count">0</span>
+            </a>
+            <a href="#" class="cart-icon">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count">0</span>
+            </a>
+            <a href="#" class="community-icon" onclick="toggleChat()">
+              <i class="fas fa-users"></i>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Chat Screen -->
+    <div class="chat-screen" id="chatScreen">
+      <div class="chat-header">
+        <h3>Topluluk Sohbeti</h3>
+        <button class="close-chat" onclick="toggleChat()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="chat-messages">
+        <div class="message">
+          <div class="message-avatar">
+            <img src="https://placehold.co/40x40" alt="Kullanıcı" />
+          </div>
+          <div class="message-content">
+            <div class="message-user">Ahmet Y.</div>
+            <p>Merhaba! Kitap değişimi yapmak isteyen var mı?</p>
+          </div>
+          <span class="message-time">12:30</span>
+        </div>
+        <div class="message">
+          <div class="message-avatar">
+            <img src="https://placehold.co/40x40" alt="Kullanıcı" />
+          </div>
+          <div class="message-content">
+            <div class="message-user">Ayşe K.</div>
+            <p>Ben varım! Dostoyevski'nin kitaplarını arıyorum.</p>
+          </div>
+          <span class="message-time">12:31</span>
+        </div>
+      </div>
+      <div class="chat-input">
+        <input type="text" placeholder="Mesajınızı yazın..." />
+        <button class="send-message">
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="book-detail-container">
+      <!-- Sol Taraf - Kitap Görseli ve Yorumlar -->
+      <section class="book-image-section">
+        <div class="book-cover">
+          <img src="https://placehold.co/400x600" alt="Suç ve Ceza" />
+          <div class="book-actions">
+            <button class="action-btn favorite-btn" data-book-id="1">
+              <i class="far fa-heart"></i>
+              Favorilere Ekle
+            </button>
+            <button class="action-btn share-btn">
+              <i class="fas fa-share-alt"></i>
+              Paylaş
+            </button>
+          </div>
+        </div>
+
+        <!-- Yorumlar Bölümü -->
+        <div class="reviews-section">
+          <h3>Kullanıcı Yorumları</h3>
+          <div class="rating-summary">
+            <div class="average-rating">
+              <span class="rating">4.8</span>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <span class="total-reviews">(128 yorum)</span>
+            </div>
+          </div>
+
+          <!-- Yorum Listesi -->
+          <div class="reviews-list">
+            <div class="review-item">
+              <div class="review-header">
+                <img
+                  src="https://placehold.co/40x40"
+                  alt="Kullanıcı"
+                  class="user-avatar"
+                />
+                <div class="review-info">
+                  <h4>Ahmet Y.</h4>
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <span class="review-date">2 gün önce</span>
+              </div>
+              <p class="review-text">
+                Kitap beklediğimden çok daha iyi durumdaydı. Satıcı çok
+                ilgiliydi ve hızlı kargo için teşekkürler.
+              </p>
+            </div>
+
+            <div class="review-item">
+              <div class="review-header">
+                <img
+                  src="https://placehold.co/40x40"
+                  alt="Kullanıcı"
+                  class="user-avatar"
+                />
+                <div class="review-info">
+                  <h4>Ayşe K.</h4>
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                </div>
+                <span class="review-date">1 hafta önce</span>
+              </div>
+              <p class="review-text">
+                Fiyatı biraz yüksek ama kitabın durumu gerçekten çok iyi.
+                Öneririm.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sağ Taraf - Kitap Detayları -->
+      <section class="book-info-section">
+        <div class="book-header">
+          <h1>Suç ve Ceza</h1>
+          <p class="author">Fyodor Dostoyevski</p>
+          <div class="book-meta">
+            <span class="condition"
+              ><i class="fas fa-info-circle"></i> İkinci El</span
+            >
+            <span class="publisher"
+              ><i class="fas fa-building"></i> İş Bankası Yayınları</span
+            >
+            <span class="year"><i class="fas fa-calendar"></i> 2020</span>
+          </div>
+        </div>
+
+        <!-- Satıcı Bilgileri -->
+        <div class="seller-info">
+          <div class="seller-header">
+            <img
+              src="https://placehold.co/60x60"
+              alt="Satıcı"
+              class="seller-avatar"
+            />
+            <div class="seller-details">
+              <h3>Mehmet K.</h3>
+              <div class="seller-rating">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <span>(45 satış)</span>
+              </div>
+            </div>
+          </div>
+          <div class="seller-actions">
+            <button class="chat-btn">
+              <i class="far fa-comment"></i>
+              Mesaj Gönder
+            </button>
+            <button class="follow-btn">
+              <i class="far fa-user"></i>
+              Takip Et
+            </button>
+          </div>
+        </div>
+
+        <!-- Fiyat ve Satın Alma -->
+        <div class="purchase-section">
+          <div class="price-info">
+            <div class="current-price">
+              <span class="price">45 TL</span>
+              <span class="original-price">60 TL</span>
+              <span class="discount">%25 İndirim</span>
+            </div>
+            <div class="shipping-info">
+              <i class="fas fa-truck"></i>
+              <span>Ücretsiz Kargo</span>
+            </div>
+          </div>
+
+          <div class="purchase-options">
+            <button
+              class="buy-btn"
+              data-book-id="1"
+              data-title="Suç ve Ceza"
+              data-price="45"
+            >
+              <i class="fas fa-shopping-cart"></i>
+              Satın Al
+            </button>
+            <button class="exchange-btn" data-book-id="1">
+              <i class="fas fa-sync-alt"></i>
+              Takas Teklif Et
+            </button>
+          </div>
+        </div>
+
+        <!-- Kitap Açıklaması -->
+        <div class="book-description">
+          <h3>Kitap Hakkında</h3>
+          <p>
+            Suç ve Ceza, Fyodor Dostoyevski'nin en önemli eserlerinden biridir.
+            Roman, yoksul bir hukuk öğrencisi olan Raskolnikov'un işlediği
+            cinayet ve sonrasında yaşadığı vicdan azabını konu alır. Psikolojik
+            derinliği ve toplumsal eleştirisiyle dünya edebiyatının
+            başyapıtlarından biri olarak kabul edilir.
+          </p>
+        </div>
+
+        <!-- Kitap Detayları -->
+        <div class="book-details">
+          <h3>Kitap Detayları</h3>
+          <ul>
+            <li><strong>Sayfa Sayısı:</strong> 687</li>
+            <li><strong>Dil:</strong> Türkçe</li>
+            <li><strong>Baskı Yılı:</strong> 2020</li>
+            <li><strong>ISBN:</strong> 978-975-458-956-2</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- Benzer Kitaplar -->
+    <section class="similar-books">
+      <h2>Benzer Kitaplar</h2>
+      <div class="similar-books-grid">
+        <!-- Benzer Kitap 1 -->
+        <div class="similar-book-card">
+          <div class="similar-book-image">
+            <img src="https://placehold.co/200x300" alt="Benzer Kitap" />
+            <div class="similar-book-overlay">
+              <button class="card-btn favorite-btn">
+                <i class="far fa-heart"></i>
+                Favorilere Ekle
+              </button>
+              <button class="card-btn contact-btn">
+                <i class="far fa-comment"></i>
+                İletişime Geç
+              </button>
+            </div>
+          </div>
+          <div class="similar-book-info">
+            <h3>Karamazov Kardeşler</h3>
+            <p class="similar-book-author">Fyodor Dostoyevski</p>
+            <div class="similar-book-footer">
+              <div class="similar-book-price-info">
+                <span class="similar-book-price">55 TL</span>
+                <span class="similar-book-original-price">70 TL</span>
+              </div>
+              <span class="similar-book-location">
+                <i class="fas fa-map-marker-alt"></i>
+                Kadıköy
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Benzer Kitap 2 -->
+        <div class="similar-book-card">
+          <div class="similar-book-image">
+            <img src="https://placehold.co/200x300" alt="Benzer Kitap" />
+            <div class="similar-book-overlay">
+              <button class="card-btn favorite-btn">
+                <i class="far fa-heart"></i>
+                Favorilere Ekle
+              </button>
+              <button class="card-btn contact-btn">
+                <i class="far fa-comment"></i>
+                İletişime Geç
+              </button>
+            </div>
+          </div>
+          <div class="similar-book-info">
+            <h3>Yeraltından Notlar</h3>
+            <p class="similar-book-author">Fyodor Dostoyevski</p>
+            <div class="similar-book-footer">
+              <div class="similar-book-price-info">
+                <span class="similar-book-price">35 TL</span>
+                <span class="similar-book-original-price">50 TL</span>
+              </div>
+              <span class="similar-book-location">
+                <i class="fas fa-map-marker-alt"></i>
+                Beşiktaş
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer buraya eklenecek -->
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script>
+    function toggleChat() {
+      const chatScreen = document.getElementById('chatScreen');
+      chatScreen.classList.toggle('active');
+    }
+
+    // Enter tuşu ile mesaj gönderme
+    document.querySelector('.chat-input input').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        const message = this.value.trim();
+        if (message) {
+          // Mesaj gönderme işlemi burada yapılacak
+          this.value = '';
+        }
+      }
+    });
+
+    // Gönder butonuna tıklama
+    document.querySelector('.send-message').addEventListener('click', function() {
+      const input = document.querySelector('.chat-input input');
+      const message = input.value.trim();
+      if (message) {
+        // Mesaj gönderme işlemi burada yapılacak
+        input.value = '';
+      }
+    });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webkit</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+</head>
+<body>
+    <div class="hero">
+      <img
+        src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-4.0.3"
+        alt="Library Background"
+        class="hero-background"
+      />
+      <header>
+        <nav>
+          <div class="logo">
+            <h1 style="color: #ffd700">Webkit</h1>
+          </div>
+          <div class="nav-links">
+            <a href="#home">Ana Sayfa</a>
+            <a href="#about">Hakkımızda</a>
+            <a href="#contact">İletişim</a>
+          </div>
+          <div class="auth-buttons">
+            <button class="login-btn" onclick="showLoginModal()">
+              <i class="fas fa-user"></i> Giriş Yap
+            </button>
+            <button class="register-btn" onclick="showRegisterModal()">
+              <i class="fas fa-user-plus"></i> Kayıt Ol
+            </button>
+          </div>
+        </nav>
+      </header>
+      <div class="hero-content">
+        <h1>Kitaplar Yeniden Hayat Buluyor!</h1>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+          <input
+            type="text"
+            placeholder="Kitap adı, yazar veya ISBN ile arama yapın..."
+          />
+          <button type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+
+        <!-- Main Buttons -->
+        <div class="main-buttons">
+          <a href="#sell" class="btn btn-primary">
+            <i class="fas fa-book"></i>
+            Kitap Sat
+          </a>
+          <a href="#explore" class="btn btn-secondary">
+            <i class="fas fa-compass"></i>
+            Keşfet
+          </a>
+          <a href="#community" class="btn btn-secondary">
+            <i class="fas fa-users"></i>
+            Topluluk
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Giriş Modalı -->
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal" onclick="closeLoginModal()">&times;</span>
+        <h2>Giriş Yap</h2>
+        <form class="login-form">
+          <div class="form-group">
+            <label for="email">E-posta</label>
+            <input
+              type="email"
+              id="email"
+              required
+              placeholder="E-posta adresiniz"
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Şifre</label>
+            <input
+              type="password"
+              id="password"
+              required
+              placeholder="Şifreniz"
+            />
+          </div>
+          <div class="form-options">
+            <label class="remember-me">
+              <input type="checkbox" /> Beni hatırla
+            </label>
+            <a href="#" class="forgot-password">Şifremi unuttum</a>
+          </div>
+          <button type="submit" class="submit-btn">Giriş Yap</button>
+          <div class="social-login">
+            <p>veya şununla giriş yap:</p>
+            <div class="social-buttons">
+              <button type="button" class="google-btn">
+                <i class="fab fa-google"></i> Google
+              </button>
+              <button type="button" class="facebook-btn">
+                <i class="fab fa-facebook-f"></i> Facebook
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Kayıt Modalı -->
+    <div id="registerModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal" onclick="closeRegisterModal()">&times;</span>
+        <h2>Kayıt Ol</h2>
+        <form class="register-form">
+          <div class="form-group">
+            <label for="name">Ad & Soyad</label>
+            <input
+              type="text"
+              id="name"
+              required
+              placeholder="Adınız ve soyadınız"
+            />
+          </div>
+          <div class="form-group">
+            <label for="register-email">E-posta</label>
+            <input
+              type="email"
+              id="register-email"
+              required
+              placeholder="E-posta adresiniz"
+            />
+          </div>
+          <div class="form-group">
+            <label for="register-password">Şifre</label>
+            <div class="password-input">
+              <input
+                type="password"
+                id="register-password"
+                required
+                placeholder="Şifreniz"
+              />
+              <button
+                type="button"
+                class="toggle-password"
+                onclick="togglePassword('register-password')"
+              >
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="phone">Telefon</label>
+            <input
+              type="tel"
+              id="phone"
+              required
+              placeholder="Telefon numaranız"
+            />
+          </div>
+          <div class="form-group">
+            <label for="city">Şehir</label>
+            <select id="city" required>
+              <option value="">Şehir Seçiniz</option>
+              <option value="adana">Adana</option>
+              <option value="adıyaman">Adıyaman</option>
+              <option value="afyonkarahisar">Afyonkarahisar</option>
+              <option value="ağrı">Ağrı</option>
+              <option value="amasya">Amasya</option>
+              <option value="ankara">Ankara</option>
+              <option value="malatya">Malatya</option>
+              <option value="manisa">Manisa</option>
+              <option value="kahramanmaraş">Kahramanmaraş</option>
+              <option value="mardin">Mardin</option>
+              <option value="muğla">Muğla</option>
+              <option value="muş">Muş</option>
+              <option value="nevşehir">Nevşehir</option>
+              <option value="niğde">Niğde</option>
+              <option value="ordu">Ordu</option>
+              <option value="rize">Rize</option>
+              <option value="sakarya">Sakarya</option>
+              <option value="samsun">Samsun</option>
+              <option value="siirt">Siirt</option>
+              <option value="sinop">Sinop</option>
+              <option value="sivas">Sivas</option>
+              <option value="tekirdağ">Tekirdağ</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="profile-photo">Profil Fotoğrafı</label>
+            <div class="file-upload">
+              <input type="file" id="profile-photo" accept="image/*" />
+              <label for="profile-photo" class="file-label">
+                <i class="fas fa-upload"></i> Fotoğraf Seç
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Okuma Tercihleri</label>
+            <div class="reading-preferences">
+              <label class="checkbox-label">
+                <input type="checkbox" name="preferences" value="roman" /> Roman
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="preferences" value="bilim-kurgu" />
+                Bilim Kurgu
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="preferences" value="tarih" /> Tarih
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="preferences" value="felsefe" />
+                Felsefe
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="preferences" value="siir" /> Şiir
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="preferences" value="biyografi" />
+                Biyografi
+              </label>
+            </div>
+          </div>
+
+          <div class="terms">
+            <input type="checkbox" id="terms" required />
+            <label for="terms"
+              >Kullanım koşullarını ve gizlilik politikasını kabul
+              ediyorum</label
+            >
+          </div>
+
+          <button type="submit" class="submit-btn">Kayıt Ol</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Featured Sections -->
+    <section class="featured-sections">
+      <!-- Popular Books -->
+      <div class="section-container">
+        <h2>Popüler Kitaplar</h2>
+        <div class="book-grid">
+          <div class="book-card">
+            <img src="https://placehold.co/200x300" alt="Kitap" />
+            <h3>Kitap Adı</h3>
+            <p>Yazar Adı</p>
+            <span class="price">45 TL</span>
+          </div>
+          <div class="book-card">
+            <img src="https://placehold.co/200x300" alt="Kitap" />
+            <h3>Kitap Adı</h3>
+            <p>Yazar Adı</p>
+            <span class="price">45 TL</span>
+          </div>
+          <div class="book-card">
+            <img src="https://placehold.co/200x300" alt="Kitap" />
+            <h3>Kitap Adı</h3>
+            <p>Yazar Adı</p>
+            <span class="price">45 TL</span>
+          </div>
+          <div class="book-card">
+            <img src="https://placehold.co/200x300" alt="Kitap" />
+            <h3>Kitap Adı</h3>
+            <p>Yazar Adı</p>
+            <span class="price">45 TL</span>
+          </div>
+          <div class="book-card">
+            <img src="https://placehold.co/200x300" alt="Kitap" />
+            <h3>Kitap Adı</h3>
+            <p>Yazar Adı</p>
+            <span class="price">45 TL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- New Arrivals -->
+      <div class="section-container">
+        <h2>Yeni Eklenenler</h2>
+        <div class="book-grid">
+          <div class="book-card">
+            <img src="https://placehold.co/200x300" alt="Kitap" />
+            <h3>Kitap Adı</h3>
+            <p>Yazar Adı</p>
+            <span class="price">30 TL</span>
+          </div>
+          <div class="book-card">
+            <img src="https://placehold.co/200x300" alt="Kitap" />
+            <h3>Kitap Adı</h3>
+            <p>Yazar Adı</p>
+            <span class="price">30 TL</span>
+          </div>
+          <div class="book-card">
+            <img src="https://placehold.co/200x300" alt="Kitap" />
+            <h3>Kitap Adı</h3>
+            <p>Yazar Adı</p>
+            <span class="price">30 TL</span>
+          </div>
+
+          <div class="book-card">
+            <img src="https://placehold.co/200x300" alt="Kitap" />
+            <h3>Kitap Adı</h3>
+            <p>Yazar Adı</p>
+            <span class="price">30 TL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recommended Books -->
+      <div class="section-container">
+        <h2>Önerilen Kitaplar</h2>
+        <div class="book-grid">
+          <div class="book-card">
+            <img src="https://placehold.co/200x300" alt="Kitap" />
+            <h3>Kitap Adı</h3>
+            <p>Yazar Adı</p>
+            <span class="price">35 TL</span>
+          </div>
+          <div class="book-card">
+            <img src="https://placehold.co/200x300" alt="Kitap" />
+            <h3>Kitap Adı</h3>
+            <p>Yazar Adı</p>
+            <span class="price">35 TL</span>
+          </div>
+          <div class="book-card">
+            <img src="https://placehold.co/200x300" alt="Kitap" />
+            <h3>Kitap Adı</h3>
+            <p>Yazar Adı</p>
+            <span class="price">35 TL</span>
+          </div>
+          <div class="book-card">
+            <img src="https://placehold.co/200x300" alt="Kitap" />
+            <h3>Kitap Adı</h3>
+            <p>Yazar Adı</p>
+            <span class="price">35 TL</span>
+          </div>
+
+          <div class="book-card">
+            <img src="https://placehold.co/200x300" alt="Kitap" />
+            <h3>Kitap Adı</h3>
+            <p>Yazar Adı</p>
+            <span class="price">35 TL</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <!-- Hakkımızda Bölümü -->
+        <div class="footer-section">
+          <h3>Hakkımızda</h3>
+          <p>
+            "Webkit" olarak, kitapların gücünü herkese ulaştırmayı
+            amaçlıyoruz. İkinci el kitap alım satım platformumuz sayesinde
+            kitapseverler, kitapları yeniden hayat bulur, paylaşır ve keşfeder.
+            Sahaflık geleneğini dijital ortamda yaşatarak, kitapları daha
+            erişilebilir ve sürdürülebilir kılmayı hedefliyoruz.
+          </p>
+        </div>
+
+        <!-- Hızlı Linkler -->
+        <div class="footer-section">
+          <h3>Hızlı Linkler</h3>
+          <ul>
+            <li><a href="#how-it-works">Nasıl Çalışır?</a></li>
+            <li><a href="#faq">Sıkça Sorulan Sorular</a></li>
+            <li><a href="#terms">Kullanım Şartları</a></li>
+            <li><a href="#privacy">Gizlilik Politikası</a></li>
+          </ul>
+        </div>
+
+        <!-- Destek -->
+        <div class="footer-section">
+          <h3>Destek</h3>
+          <ul>
+            <li><a href="#contact">İletişim</a></li>
+            <li><a href="#help">Yardım Merkezi</a></li>
+            <li><a href="#report">Sorun Bildir</a></li>
+            <li><a href="#feedback">Geri Bildirim</a></li>
+          </ul>
+        </div>
+
+        <!-- İletişim -->
+        <div class="footer-section">
+          <h3>İletişim</h3>
+          <ul class="contact-info">
+            <li>
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:info@sahaf.com">info@sahaf.com</a>
+            </li>
+            <li>
+              <i class="fas fa-phone"></i>
+              <a href="tel:+902121234567">0212 123 45 67</a>
+            </li>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>İstanbul, Türkiye</span>
+            </li>
+          </ul>
+
+          <!-- Sosyal Medya -->
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Alt Footer -->
+      <div class="footer-bottom">
+        <p>&copy; 2024 Webkit. Tüm hakları saklıdır.</p>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+      // Modal işlemleri
+      function showLoginModal() {
+        document.getElementById("loginModal").style.display = "flex";
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeLoginModal() {
+        document.getElementById("loginModal").style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+
+      function showRegisterModal() {
+        document.getElementById("registerModal").style.display = "flex";
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeRegisterModal() {
+        document.getElementById("registerModal").style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+
+      // Modal dışına tıklandığında kapatma
+      window.onclick = function (event) {
+        if (event.target.className === "modal") {
+          event.target.style.display = "none";
+          document.body.style.overflow = "auto";
+        }
+      };
+
+      // ESC tuşu ile modalı kapatma
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          const modals = document.getElementsByClassName("modal");
+          for (let modal of modals) {
+            if (modal.style.display === "flex") {
+              modal.style.display = "none";
+              document.body.style.overflow = "auto";
+            }
+          }
+        }
+      });
+
+      // Şifre göster/gizle fonksiyonu
+      function togglePassword(inputId) {
+        const input = document.getElementById(inputId);
+        const icon = input.nextElementSibling.querySelector("i");
+
+        if (input.type === "password") {
+          input.type = "text";
+          icon.classList.remove("fa-eye");
+          icon.classList.add("fa-eye-slash");
+        } else {
+          input.type = "password";
+          icon.classList.remove("fa-eye-slash");
+          icon.classList.add("fa-eye");
+        }
+      }
+
+      // Form gönderimini engelle
+      document.querySelectorAll("form").forEach((form) => {
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          console.log("Form gönderildi:", this.className);
+        });
+      });
+    </script>
+</body>
+</html>

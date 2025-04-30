@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keşfet</title>
+    <link rel="stylesheet" href="explore.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav>
+        <div class="logo">
+          <h1 style="color: #ffd700">Webkit</h1>
+        </div>
+        <div class="nav-links">
+          <a href="index.html">Ana Sayfa</a>
+          <a href="explore.html" class="active">Keşfet</a>
+          <a href="#">Kategoriler</a>
+        </div>
+        <div class="nav-icons">
+          <a href="#" class="favorite-icon">
+            <i class="far fa-heart"></i>
+            <span class="favorite-count">0</span>
+          </a>
+          <a href="#" class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Ana İçerik -->
+    <main class="explore-container">
+      <!-- Filtreler -->
+      <aside class="filters">
+        <div class="filter-section">
+          <h3>Kategoriler</h3>
+          <div class="filter-options">
+            <label class="filter-item">
+              <input type="checkbox" name="category" value="roman" />
+              <span>Roman</span>
+            </label>
+            <label class="filter-item">
+              <input type="checkbox" name="category" value="akademik" />
+              <span>Akademik</span>
+            </label>
+            <label class="filter-item">
+              <input type="checkbox" name="category" value="cocuk" />
+              <span>Çocuk</span>
+            </label>
+            <label class="filter-item">
+              <input type="checkbox" name="category" value="edebiyat" />
+              <span>Edebiyat</span>
+            </label>
+            <label class="filter-item">
+              <input type="checkbox" name="category" value="felsefe" />
+              <span>Felsefe</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="filter-section">
+          <h3>Fiyat Aralığı</h3>
+          <div class="price-range">
+            <div class="price-inputs">
+              <input type="number" placeholder="Min" min="0" />
+              <span>-</span>
+              <input type="number" placeholder="Max" min="0" />
+            </div>
+            <div class="price-slider">
+              <input type="range" min="0" max="1000" value="500" />
+            </div>
+          </div>
+        </div>
+
+        <div class="filter-section">
+          <h3>Konum</h3>
+          <div class="location-filter">
+            <input type="text" placeholder="Şehir veya ilçe" />
+            <button class="location-btn">
+              <i class="fas fa-map-marker-alt"></i>
+              Yakınımda Ara
+            </button>
+          </div>
+        </div>
+
+        <div class="filter-section">
+          <h3>Satış Türü</h3>
+          <div class="filter-options">
+            <label class="filter-item">
+              <input type="radio" name="saleType" value="all" checked />
+              <span>Tümü</span>
+            </label>
+            <label class="filter-item">
+              <input type="radio" name="saleType" value="exchange" />
+              <span>Takas</span>
+            </label>
+            <label class="filter-item">
+              <input type="radio" name="saleType" value="sale" />
+              <span>Satış</span>
+            </label>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Kitap Listesi -->
+      <section class="book-list">
+        <div class="list-header">
+          <div class="view-options">
+            <button class="view-btn active" data-view="grid">
+              <i class="fas fa-th-large"></i>
+            </button>
+            <button class="view-btn" data-view="list">
+              <i class="fas fa-list"></i>
+            </button>
+          </div>
+          <div class="sort-options">
+            <select>
+              <option value="newest">En Yeniler</option>
+              <option value="price-asc">Fiyat (Düşükten Yükseğe)</option>
+              <option value="price-desc">Fiyat (Yüksekten Düşüğe)</option>
+              <option value="popular">En Popüler</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="books-grid">
+          <!-- Kitap Kartı 1 -->
+          <div class="book-card">
+            <div class="book-image">
+              <img src="https://placehold.co/200x300" alt="Kitap" />
+              <div class="book-overlay">
+                <button class="card-btn favorite-btn">
+                  <i class="far fa-heart"></i>
+                  Favorilere Ekle
+                </button>
+                <button class="card-btn contact-btn">
+                  <i class="far fa-comment"></i>
+                  İletişime Geç
+                </button>
+              </div>
+            </div>
+            <div class="book-info">
+              <h3>Kitap Adı</h3>
+              <p class="author">Yazar Adı</p>
+              <div class="book-footer">
+                <div class="price-info">
+                  <span class="price">45 TL</span>
+                  <span class="original-price">60 TL</span>
+                </div>
+                <span class="location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  İstanbul
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kitap Kartı 2 -->
+          <div class="book-card">
+            <div class="book-image">
+              <img src="https://placehold.co/200x300" alt="Kitap" />
+              <div class="book-overlay">
+                <button class="card-btn favorite-btn">
+                  <i class="far fa-heart"></i>
+                  Favorilere Ekle
+                </button>
+                <button class="card-btn contact-btn">
+                  <i class="far fa-comment"></i>
+                  İletişime Geç
+                </button>
+              </div>
+            </div>
+            <div class="book-info">
+              <h3>Kitap Adı</h3>
+              <p class="author">Yazar Adı</p>
+              <div class="book-footer">
+                <div class="price-info">
+                  <span class="price">35 TL</span>
+                  <span class="original-price">50 TL</span>
+                </div>
+                <span class="location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  Ankara
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Daha fazla kitap kartı buraya eklenecek -->
+        </div>
+
+        <!-- Sayfalama -->
+        <div class="pagination">
+          <button class="page-btn" disabled>
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="page-btn active">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn">3</button>
+          <span>...</span>
+          <button class="page-btn">10</button>
+          <button class="page-btn">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Webkit. Tüm hakları saklıdır.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

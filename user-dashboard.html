@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kullanıcı Paneli - Sahaf</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="user-dashboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <h1 style="color: #ffd700">Webkit</h1>
+        </div>
+        <div class="search-bar">
+          <input type="text" placeholder="Kitap ara..." />
+          <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="user-menu">
+          <div class="notifications">
+            <i class="fas fa-bell"></i>
+            <span class="notification-badge">3</span>
+          </div>
+          <div class="user-profile">
+            <img src="https://placehold.co/40x40" alt="Profil" class="avatar" />
+            <div class="dropdown-menu">
+              <a href="#"><i class="fas fa-user"></i> Profilim</a>
+              <a href="#"><i class="fas fa-cog"></i> Ayarlar</a>
+              <a href="#"><i class="fas fa-sign-out-alt"></i> Çıkış</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="dashboard-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <nav class="sidebar-nav">
+          <a href="#" class="active">
+            <i class="fas fa-home"></i>
+            <span>Ana Sayfa</span>
+          </a>
+          <a href="#">
+            <i class="fas fa-user"></i>
+            <span>Profilim</span>
+          </a>
+          <a href="#">
+            <i class="fas fa-book"></i>
+            <span>Kitaplarım</span>
+          </a>
+          <a href="#">
+            <i class="fas fa-heart"></i>
+            <span>Favoriler</span>
+          </a>
+          <a href="#">
+            <i class="fas fa-exchange-alt"></i>
+            <span>Takaslarım</span>
+          </a>
+          <a href="#">
+            <i class="fas fa-comments"></i>
+            <span>Mesajlar</span>
+          </a>
+          <a href="#">
+            <i class="fas fa-history"></i>
+            <span>Geçmiş</span>
+          </a>
+          <a href="#">
+            <i class="fas fa-cog"></i>
+            <span>Ayarlar</span>
+          </a>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+          <div class="profile-header">
+            <div class="profile-cover">
+              <img
+                src="https://via.placeholder.com/1200x300"
+                alt="Profil Kapak"
+              />
+              <div class="cover-overlay">
+                <button class="edit-cover">
+                  <i class="fas fa-camera"></i>
+                  Kapak Fotoğrafını Değiştir
+                </button>
+              </div>
+            </div>
+            <div class="profile-info">
+              <div class="profile-avatar">
+                <div class="avatar-container">
+                  <img src="https://via.placeholder.com/150" alt="Profil" />
+                  <div class="avatar-overlay">
+                    <button class="edit-avatar">
+                      <i class="fas fa-camera"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="avatar-status">
+                  <span class="status-dot"></span>
+                  Aktif
+                </div>
+              </div>
+              <div class="profile-details">
+                <div class="profile-header-info">
+                  <div class="profile-name">
+                    <h2>Ahmet Yılmaz</h2>
+                    <span class="verified-badge">
+                      <i class="fas fa-check-circle"></i>
+                      Doğrulanmış Üye
+                    </span>
+                  </div>
+                  <div class="profile-actions">
+                    <button class="action-btn primary">
+                      <i class="fas fa-edit"></i>
+                      Profili Düzenle
+                    </button>
+                    <button class="action-btn secondary">
+                      <i class="fas fa-share"></i>
+                      Paylaş
+                    </button>
+                  </div>
+                </div>
+                <div class="profile-meta">
+                  <div class="location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>İstanbul, Türkiye</span>
+                  </div>
+                  <div class="join-date">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Ocak 2024'ten beri üye</span>
+                  </div>
+                </div>
+                <div class="profile-stats">
+                  <div class="stat">
+                    <span class="number">4.8</span>
+                    <span class="label">Profil Puanı</span>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                  </div>
+                  <div class="stat">
+                    <span class="number">1,234</span>
+                    <span class="label">Puan</span>
+                    <span class="trend positive">
+                      <i class="fas fa-arrow-up"></i>
+                      120 bu ay
+                    </span>
+                  </div>
+                  <div class="stat">
+                    <span class="number">45</span>
+                    <span class="label">Kitap</span>
+                    <span class="trend positive">
+                      <i class="fas fa-arrow-up"></i>
+                      5 yeni
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Badges Section -->
+        <section class="badges-section">
+          <h3>Rozetlerim</h3>
+          <div class="badges-grid">
+            <div class="badge-card">
+              <div class="badge-icon">
+                <i class="fas fa-book-reader"></i>
+              </div>
+              <div class="badge-info">
+                <h4>Kitap Kurdu</h4>
+                <p>100 kitap okudunuz</p>
+              </div>
+              <div class="badge-progress">
+                <div class="progress-bar">
+                  <div class="progress" style="width: 75%"></div>
+                </div>
+                <span>75/100</span>
+              </div>
+            </div>
+            <div class="badge-card">
+              <div class="badge-icon">
+                <i class="fas fa-comments"></i>
+              </div>
+              <div class="badge-info">
+                <h4>Sosyal Kelebek</h4>
+                <p>50 yorum yaptınız</p>
+              </div>
+              <div class="badge-progress">
+                <div class="progress-bar">
+                  <div class="progress" style="width: 30%"></div>
+                </div>
+                <span>15/50</span>
+              </div>
+            </div>
+            <div class="badge-card">
+              <div class="badge-icon">
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="badge-info">
+                <h4>Değerlendirme Uzmanı</h4>
+                <p>25 kitap değerlendirdiniz</p>
+              </div>
+              <div class="badge-progress">
+                <div class="progress-bar">
+                  <div class="progress" style="width: 60%"></div>
+                </div>
+                <span>15/25</span>
+              </div>
+            </div>
+            <div class="badge-card">
+              <div class="badge-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <div class="badge-info">
+                <h4>Topluluk Lideri</h4>
+                <p>100 takipçi kazandınız</p>
+              </div>
+              <div class="badge-progress">
+                <div class="progress-bar">
+                  <div class="progress" style="width: 45%"></div>
+                </div>
+                <span>45/100</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Points History -->
+        <section class="points-history">
+          <h3>Puan Geçmişi</h3>
+          <div class="history-list">
+            <div class="history-item">
+              <div class="history-icon positive">
+                <i class="fas fa-plus"></i>
+              </div>
+              <div class="history-info">
+                <h4>Kitap Okuma Puanı</h4>
+                <p>Suç ve Ceza - 100 sayfa okudunuz</p>
+                <span class="history-date">2 saat önce</span>
+              </div>
+              <div class="history-points positive">+50 puan</div>
+            </div>
+            <div class="history-item">
+              <div class="history-icon positive">
+                <i class="fas fa-plus"></i>
+              </div>
+              <div class="history-info">
+                <h4>Değerlendirme Puanı</h4>
+                <p>1984 kitabını değerlendirdiniz</p>
+                <span class="history-date">1 gün önce</span>
+              </div>
+              <div class="history-points positive">+25 puan</div>
+            </div>
+            <div class="history-item">
+              <div class="history-icon positive">
+                <i class="fas fa-plus"></i>
+              </div>
+              <div class="history-info">
+                <h4>Seviye Atlama</h4>
+                <p>Seviye 4'ten 5'e yükseldiniz</p>
+                <span class="history-date">2 gün önce</span>
+              </div>
+              <div class="history-points positive">+100 puan</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- İstatistikler -->
+        <section class="stats-section">
+          <div class="stat-card">
+            <i class="fas fa-book"></i>
+            <div class="stat-info">
+              <h3>Kitaplarım</h3>
+              <span>12</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-heart"></i>
+            <div class="stat-info">
+              <h3>Favoriler</h3>
+              <span>8</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-exchange-alt"></i>
+            <div class="stat-info">
+              <h3>Takaslar</h3>
+              <span>5</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-comments"></i>
+            <div class="stat-info">
+              <h3>Mesajlar</h3>
+              <span>3</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Son Aktiviteler -->
+        <section class="recent-activities">
+          <h3>Son Aktiviteler</h3>
+          <div class="activity-list">
+            <div class="activity-item">
+              <i class="fas fa-book"></i>
+              <div class="activity-content">
+                <p>Yeni bir kitap eklediniz: "Suç ve Ceza"</p>
+                <span class="activity-time">2 saat önce</span>
+              </div>
+            </div>
+            <div class="activity-item">
+              <i class="fas fa-exchange-alt"></i>
+              <div class="activity-content">
+                <p>Yeni bir takas teklifi aldınız</p>
+                <span class="activity-time">5 saat önce</span>
+              </div>
+            </div>
+            <div class="activity-item">
+              <i class="fas fa-comments"></i>
+              <div class="activity-content">
+                <p>Yeni bir mesajınız var</p>
+                <span class="activity-time">1 gün önce</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Favori Kitaplar -->
+        <section class="favorite-books">
+          <h3>Favori Kitaplarınız</h3>
+          <div class="books-grid">
+            <div class="book-card">
+              <img src="https://placehold.co/200x300" alt="Kitap" />
+              <div class="book-info">
+                <h4>Suç ve Ceza</h4>
+                <p>Fyodor Dostoyevski</p>
+                <span class="price">45 TL</span>
+              </div>
+            </div>
+            <div class="book-card">
+              <img src="https://placehold.co/200x300" alt="Kitap" />
+              <div class="book-info">
+                <h4>Karamazov Kardeşler</h4>
+                <p>Fyodor Dostoyevski</p>
+                <span class="price">55 TL</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Sağ Sidebar -->
+      <aside class="right-sidebar">
+        <!-- Bildirimler -->
+        <section class="notifications-section">
+          <h3>Bildirimler</h3>
+          <div class="notification-list">
+            <div class="notification-item">
+              <i class="fas fa-bell"></i>
+              <div class="notification-content">
+                <p>Yeni bir takas teklifi</p>
+                <span>2 saat önce</span>
+              </div>
+            </div>
+            <div class="notification-item">
+              <i class="fas fa-comments"></i>
+              <div class="notification-content">
+                <p>Yeni mesaj</p>
+                <span>5 saat önce</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Önerilen Kitaplar -->
+        <section class="suggested-books">
+          <h3>Önerilen Kitaplar</h3>
+          <div class="suggested-book-list">
+            <div class="suggested-book">
+              <img src="https://placehold.co/100x150" alt="Kitap" />
+              <div class="suggested-book-info">
+                <h4>Yeraltından Notlar</h4>
+                <p>35 TL</p>
+              </div>
+            </div>
+            <div class="suggested-book">
+              <img src="https://placehold.co/100x150" alt="Kitap" />
+              <div class="suggested-book-info">
+                <h4>Beyaz Geceler</h4>
+                <p>25 TL</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </aside>
+    </div>
+
+    <script>
+      // Kullanıcı menüsü için dropdown
+      document
+        .querySelector(".user-profile")
+        .addEventListener("click", function () {
+          this.querySelector(".dropdown-menu").classList.toggle("active");
+        });
+
+      // Bildirim sayısını güncelleme
+      function updateNotificationCount() {
+        const count = document.querySelectorAll(".notification-item").length;
+        document.querySelector(".notification-badge").textContent = count;
+      }
+
+      // Sayfa yüklendiğinde bildirim sayısını güncelle
+      document.addEventListener("DOMContentLoaded", updateNotificationCount);
+    </script>
+  </body>
+</html>
